@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/ar.js/2.1.8/aframe/build/aframe-ar.min.js"></script>
+  </head>
+  <body style="margin: 0; overflow: hidden;">
+    <a-scene
+      embedded
+      arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
+    >
+      <a-nft
+        type="nft"
+        url="blaster_diavolo_marker/blaster_diavolo"
+        smooth="true"
+        smoothCount="10"
+        smoothTolerance="0.01"
+        smoothThreshold="5"
+      >
+        <a-entity
+          gltf-model="modello.glb"
+          position="0 0 0"
+          scale="0.5 0.5 0.5"
+          rotation="0 0 0"
+        ></a-entity>
+      </a-nft>
+
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
